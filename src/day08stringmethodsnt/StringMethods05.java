@@ -10,7 +10,5 @@ public class StringMethods05 {
 		System.out.println(str.length());//7
 		System.out.println(str.trim());//Java
 		System.out.println(str.trim().length());//4
-
 	}
-
 }
