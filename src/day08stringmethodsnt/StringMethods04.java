@@ -1,7 +1,5 @@
 package day08stringmethodsnt;
 
-import java.util.Scanner;
-
 public class StringMethods04 {
 
 	public static void main(String[] args) {
@@ -14,9 +12,6 @@ public class StringMethods04 {
 		 *           Note: For every step use your password 
 		 *           Example for password: " Hey Come1?  "    
 		 */
-			Scanner scan = new Scanner(System.in);
-			System.out.println("Enter a password according to the given rules");
-			String p = scan.nextLine();
 			
 		 // 2) Find the index of the initials of the words in your password
 		 //    index of the first word is 1.
@@ -48,7 +43,6 @@ public class StringMethods04 {
 		       
 			
 		 // 11)Print your password on the console like all characters in lower case      
-		       
 
 	}
 
