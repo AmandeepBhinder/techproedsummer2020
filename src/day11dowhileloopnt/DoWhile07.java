@@ -16,23 +16,14 @@ public class DoWhile07 {
 		String str = scan.nextLine();
 		int idx = 0;
 		
-		do {
+		do {			
 			if(idx%2!=0) {
 				System.out.print(str.charAt(idx) + " ");
-			}
-			idx++;			
+			}			
+			idx++;				
 		}while(idx<str.length());
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+		scan.close();
 
 	}
 
