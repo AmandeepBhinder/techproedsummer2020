@@ -38,6 +38,7 @@ public class Arrays03 {
         
         //Use sort() first
         Arrays.sort(ch);
+        System.out.println("===>"+ch[1]);
         System.out.println(Arrays.toString(ch));//[a, b, c, d]
         
         //Use loops

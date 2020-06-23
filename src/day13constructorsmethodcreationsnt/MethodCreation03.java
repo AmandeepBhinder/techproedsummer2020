@@ -13,7 +13,7 @@ public class MethodCreation03 {
 		addNums("a", 12);//a12
 
 	}
-	//1. If you change the name the methods will be different methods. But sometimes we need some
+	//1. If you change the name, the methods will be different methods. But sometimes we need some
 	//   methods which have same names because of that do not make the names different
 
 	public static void addNums(int x, int y) {
