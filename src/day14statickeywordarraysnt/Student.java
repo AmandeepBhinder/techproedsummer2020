@@ -8,8 +8,8 @@ public class Student {
 	
 	Student(int r, String n, String college){
 		//For instance variables using this or not-using this is same
-		number= r;
-		name = n;
+		this.number= r;
+		this.name = n;
 		//But for static variables if you do not use this it is not changing the variable
 		this.college = college;
 	}
