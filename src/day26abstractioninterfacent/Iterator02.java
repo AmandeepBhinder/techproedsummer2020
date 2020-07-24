@@ -7,9 +7,9 @@ import java.util.ListIterator;
 public class Iterator02 {
 	public static void main(String[] args) {
 		List<String> list = new ArrayList<>();
-		list.add("X");
-		list.add("Y");
-		list.add("Z");
+		list.add("Xmnopr");
+		list.add("Ymnopr");
+		list.add("Zmnopr");
 		
 		for(String w : list) {
 			w = w + "!";
@@ -18,8 +18,8 @@ public class Iterator02 {
 		
 		ListIterator<String> it = list.listIterator();		
 		while(it.hasNext()) {	
-			Object el = it.next();
-			it.set(el + "!");			
+			String el = it.next();
+			it.set(el.replace(el.substring(el.length()-3), "***"));			
 		}
 		System.out.println(list);
 	}
