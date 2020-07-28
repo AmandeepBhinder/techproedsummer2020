@@ -3,7 +3,7 @@ package projectsnt;
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
-public class Account {
+public class Account01 {
 	
 	private int customerNumber;
 	private int pinNumber;
@@ -112,14 +112,14 @@ public class Account {
 		}
 	}
 	
-	/*Customer checking account withdraw input */
+	/*Customer checking account deposit input */
 	public void getSavingDepositInput() {
 		System.out.println("Balance: " + moneyFormat.format(savingBalance));
 		System.out.println("Amount you want to deposit from saving account: ");
 		double amount = scan.nextDouble();
 		
 		if(savingBalance+amount>=0) {
-			calcSavingWithdraw(amount);
+			calcSavingDeposit(amount);
 			System.out.println("New balance: " + moneyFormat.format(savingBalance));
 		}else {
 			System.out.println("No enough money to deposit for that amount");

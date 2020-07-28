@@ -1,5 +1,9 @@
 package projectsnt;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
 public class Q01 {
 	
 	/*
@@ -15,7 +19,36 @@ public class Q01 {
 		7) Print the personnel names and unique ids like => {John Walker=202035, Mark Twain=202036, John Walker Nick=202037} 
     */
 
+	static int id = 20203500;
+	
 	public static void main(String[] args) {
+		
+		Map<String, Integer> map = new HashMap<>();
+		String name = "";
+		
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter personnel name");
+		System.out.println("If you want to quit and see the personnal list press 'q'");
+		
+		while(!name.equals("q")) {
+			name = scan.nextLine();
+			
+			if(!name.equals("q")) {
+				
+				if(map.containsKey(name)) {
+					System.out.println(name + " exists, please enter a nickname");
+					String nickName = scan.nextLine();
+					name = name  + nickName;
+				}
+				
+				map.put(name, id);
+				id++;
+			}
+	
+		}
+		 System.out.println(map);
+
+		 scan.close();
 
 	}
 

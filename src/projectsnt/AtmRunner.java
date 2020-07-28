@@ -1,9 +1,9 @@
 package projectsnt;
 
-public class Atm extends OptionMenu {
+public class AtmRunner extends Options01 {
 
 	public static void main(String[] args) {
-		OptionMenu optionMenu = new OptionMenu();
+		Options01 optionMenu = new Options01();
 		optionMenu.getLogin();
 	}
 }

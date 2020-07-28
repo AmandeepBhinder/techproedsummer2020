@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Map.Entry;
 import java.util.Scanner;
 
-public class OptionMenu extends Account {
+public class Options01 extends Account01 {
 
 	Scanner scan = new Scanner(System.in);
 	DecimalFormat moneyFormat = new DecimalFormat("'$'###,##0.00");
@@ -132,14 +132,6 @@ public class OptionMenu extends Account {
 				getAccountType();
 		}
 	}
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 }
