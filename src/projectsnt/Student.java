@@ -29,7 +29,7 @@ public class Student {
 		this.gradeYear = scan.nextInt();
 		
 		setStudentId();	
-		scan.close();
+
 	}
 	
 	//Generate an Id
@@ -43,16 +43,16 @@ public class Student {
 	public void enroll() {
 		//Get inside a loop, user hits 0
 		do{
+			Scanner scan = new Scanner(System.in); 
 			System.out.println("Enter course to enroll (Q to quit)");
-            Scanner scan = new Scanner(System.in); 
-		    String course = scan.nextLine();
+		    String course = scan.next();
 		    if(!course.equals("Q")) {
 			   courses = courses + "\n" + course;
 			   tuitionBalance = tuitionBalance + costOfCourse;
 		    }else {
 			   break;
 		    }
-			scan.close();
+
 		}while(1!=0);    
 		System.out.println("Enrolled in: " + courses);
 
@@ -71,7 +71,7 @@ public class Student {
 		tuitionBalance = tuitionBalance - payment;
 		System.out.println("Thanks for payment of $" + payment);
 		viewBalance();
-		scan.close();
+
 	}
 
 	//Show status
@@ -97,9 +97,8 @@ public class Student {
 			System.out.println("Press 'S' to stop entrance");
 			System.out.println("Press Enter to go on entrance");
 			exit = scan.nextLine();			
-		}	
-		getStudentInfo();	
-		scan.close();
+		}		
+		selectOptions();
 	}
 	
 	//Get students info by id
@@ -114,11 +113,53 @@ public class Student {
 			System.out.println("Press 'X' to end the program");
 			id = scan.nextLine();
 			result = studentInfo.get(id);
-			System.out.println(result);		
+			if(!id.contentEquals("X")) {
+			   System.out.println(result);	
+			}
 			
 		}while(!id.equals("X"));
+		selectOptions();
 		
-		scan.close();
+	}
+	
+	//Remove student by id
+	public static void removeStudent() {
+		
+		Scanner scan = new Scanner(System.in);
+		String id = "";
+		String result = "";
+		
+		do {
+			System.out.println("Enter student id to remove");
+			System.out.println("Press 'X' to end the program");
+			id = scan.nextLine();
+			result = studentInfo.remove(id);
+			if(!id.equals("X")) {
+				System.out.println(result + " \nRemoved from the students list");	
+			}
+			
+		}while(!id.equals("X"));
+		selectOptions();	
+	}
+	
+	public static void selectOptions() {
+		System.out.println("Select the options:");
+		System.out.println("1: Add students\n" + "2: Print information\n" + "3: Delete students\n");
+		Scanner scan = new Scanner(System.in);
+		int option = scan.nextInt();
+		switch(option) {
+		case 1:
+			createStudentDatabase();
+			break;
+		case 2:
+			getStudentInfo();
+			break;
+		case 3:
+			removeStudent();
+			break;
+		default:
+			System.out.println("Invalid option select 1, 2, or 3");			
+		}
 		
 	}
 
