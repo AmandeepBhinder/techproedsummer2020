@@ -1,4 +1,4 @@
-package projectsnt;
+package day33projectsnt;
 
 public class Q03 {
 

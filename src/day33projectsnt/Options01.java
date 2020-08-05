@@ -1,4 +1,4 @@
-package projectsnt;
+package day33projectsnt;
 
 import java.text.DecimalFormat;
 import java.util.HashMap;

@@ -1,4 +1,4 @@
-package projectsnt;
+package day33projectsnt;
 
 import java.util.HashMap;
 import java.util.Map;
